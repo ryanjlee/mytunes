@@ -2,9 +2,38 @@
 <html>
 <head>
 <title>MyTunes</title>
+<style>
+body {
+    font-family: Helvetica;
+    background-color: #333;
+    color: #eee;
+    margin: 50px auto;
+    font-size: 20px;
+    width: 60%;
+}
+.mytunes{
+    border:1px solid #111;
+    background-color: #111;
+    border-radius: 20px;
+}
+table {
+    padding: 20px;
+}
+th {
+    font-size: 2em;
+}
+h1 {
+    font-size: 4em;
+    letter-spacing: -0.1em;
+    font-style: italic;
+    margin: 0 auto;
+}
 
+</style>
 </head>
   <body>
+  <h1>MyTunes</h1>
+  <div class="mytunes"></div>
     <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
      below them until after the scripts load-->
     <script src="bower_components/jquery/jquery.min.js"></script>
@@ -35,7 +64,7 @@
         var appView = new AppView({model: app});
 
         // put the view onto the screen
-        $('body').append(appView.render());
+        $('.mytunes').html(appView.render());
       });
     </script>
   </body>
